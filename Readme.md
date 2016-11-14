@@ -28,7 +28,9 @@ My opinion is that I want to do the wiring myself because I don't like magic,
 e.g. overriding node's require function or parsing files.
 
     "use strict";
-    let container = require("dipsy");
+    let Dipsy = require("dipsy");
+    let container = new Dipsy();
+
 
     //GeoHelper is a singleton with no dependencies
     container.register("GeoHelper", require("./helpers/GeoHelper"));
